@@ -1,4 +1,4 @@
-import { Theme } from "@radix-ui/themes";
+import { Theme, ThemePanel } from "@radix-ui/themes";
 import ThemeProviding from "@/components/ThemeProviding";
 import "./globals.css";
 // import "@radix-ui/themes/styles.css";
@@ -24,6 +24,7 @@ export default function RootLayout({
         <ThemeProviding>
           <Theme className="h-full " grayColor="sage" panelBackground="solid">
             {children}
+            <ThemePanel />
           </Theme>
         </ThemeProviding>
       </body>

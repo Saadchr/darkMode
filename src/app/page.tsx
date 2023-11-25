@@ -15,7 +15,7 @@ import "@radix-ui/themes/styles.css";
 
 export default function Home() {
   return (
-    <main className="flex min-h-full flex-col items-center justify-between p-24">
+    <main className="flex min-h-full flex-col items-center justify-between p-16">
       <Container size="1">
         <Flex direction="column" pb="4">
           <Flex justify={"between"} align={"baseline"}>
@@ -28,23 +28,21 @@ export default function Home() {
         </Flex>
 
         <Flex gap="4" direction="column">
-          <Card
-            style={{ backgroundColor: "var(--gray-1)" }}
-            variant="classic"
-            color="red"
-          >
+          <Card className="hover:shadow-lg hover:scale-105 transition-all duration-100 ease-in-out bg-red-7 hover:bg-gray-1 ">
             <Flex gap="1" direction="column">
               <Text>Issue #23 - Button Is Wrong Color</Text>
               <Flex gap="2">
                 <Badge>Devops</Badge>
                 <Badge>UI</Badge>
               </Flex>
-              <Text className="text-gray-11">
+              <Text color="gray">
                 This is an issue that is very serious. On a dashboard that only
                 5 users use, there is a button that is the wrong shade of green.
                 This is mission
               </Text>
-              <Button color="amber">Click on my tomato</Button>
+              <Button className="hover:cursor-pointer" color="amber">
+                Click on my tomato
+              </Button>
 
               <Flex justify="between" pt="1">
                 <Flex align="center">
@@ -59,7 +57,7 @@ export default function Home() {
             </Flex>
           </Card>
 
-          <Card>
+          <Card className="bg-gray-3">
             <Flex gap="1" direction="column">
               <Text>Issue #24 - Button Is Wrong Color</Text>
               <Flex gap="2">
@@ -82,7 +80,6 @@ export default function Home() {
               </Flex>
             </Flex>
           </Card>
-
           <Card>
             <Flex gap="1" direction="column">
               <Text>Issue #24 - Button Is Wrong Color</Text>

@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import radixThemePlugin from "radix-ui-themes-with-tailwind";
 
 const config: Config = {
   content: [
