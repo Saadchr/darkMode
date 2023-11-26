@@ -19,13 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="h-full min-h-full" lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} min-h-full `}>
-        <ThemeProviding>
-          <Theme className="h-full " grayColor="sage" panelBackground="solid">
-            {children}
-            <ThemePanel />
-          </Theme>
+    <html className="h-full  " lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} h-full`}>
+        <ThemeProviding className="h-full">
+          <Theme>{children}</Theme>
         </ThemeProviding>
       </body>
     </html>

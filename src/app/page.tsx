@@ -4,10 +4,9 @@ import {
   Heading,
   Text,
   Card,
-  Box,
   Badge,
   Button,
-  IconButton,
+  Box,
 } from "@radix-ui/themes";
 import IconDarkLight from "@/components/IconDarkLight";
 import { ChatBubbleIcon, SunIcon, MoonIcon } from "@radix-ui/react-icons";
@@ -15,20 +14,30 @@ import "@radix-ui/themes/styles.css";
 
 export default function Home() {
   return (
-    <main className="flex min-h-full flex-col items-center justify-between p-16">
-      <Container size="1">
+    <main className=" flex min-h-full flex-col  items-center justify-between p-16 ">
+      <Container className="border border-red-950" size="1">
         <Flex direction="column" pb="4">
-          <Flex justify={"between"} align={"baseline"}>
+          <Flex
+            m={"0"}
+            p={"0"}
+            justify={"between"}
+            align={"baseline"}
+            className="border border-red-7"
+          >
             <Heading>Coding Issue Tracker</Heading>
             <IconDarkLight />
           </Flex>
+
           <Text>
             Here you can find the issues relevant to your certain project.
           </Text>
         </Flex>
 
-        <Flex gap="4" direction="column">
-          <Card className="hover:shadow-lg hover:scale-105 transition-all duration-100 ease-in-out bg-red-7 hover:bg-gray-1 ">
+        <Flex className="border-4 border-green-400" gap="7" direction="column">
+          <Card
+            variant="surface"
+            className="hover:shadow-lg m-0 hover:scale-105 transition-all duration-100 ease-in-out  hover:bg-gray-1 bg-red-3 "
+          >
             <Flex gap="1" direction="column">
               <Text>Issue #23 - Button Is Wrong Color</Text>
               <Flex gap="2">
@@ -57,7 +66,10 @@ export default function Home() {
             </Flex>
           </Card>
 
-          <Card className="bg-gray-3">
+          <Card
+            variant="ghost"
+            className="bg-gray-3 hover:scale-105 hover:bg-gray-6"
+          >
             <Flex gap="1" direction="column">
               <Text>Issue #24 - Button Is Wrong Color</Text>
               <Flex gap="2">
@@ -80,7 +92,7 @@ export default function Home() {
               </Flex>
             </Flex>
           </Card>
-          <Card>
+          <Card variant="ghost">
             <Flex gap="1" direction="column">
               <Text>Issue #24 - Button Is Wrong Color</Text>
               <Flex gap="2">
