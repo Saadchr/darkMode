@@ -4,7 +4,7 @@ import "./globals.css";
 // import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@radix-ui/themes/styles.css";
+// import "@radix-ui/themes/styles.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +22,12 @@ export default function RootLayout({
     <html className="h-full  " lang="en" suppressHydrationWarning>
       <body className={`${inter.className} h-full`}>
         <ThemeProviding className="h-full">
-          <Theme>{children}</Theme>
+          <Theme className="h-full" grayColor="mauve">
+            <div className="absolute top-0 -z-10 min-h-full w-full bg-gray-1">
+              <div className="absolute bottom-auto left-auto right-0 top-0 min-h-full w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-pink-4 opacity-50 blur-[80px]"></div>
+              {children}
+            </div>
+          </Theme>
         </ThemeProviding>
       </body>
     </html>
