@@ -30,8 +30,8 @@ export default function Home() {
 
         <Flex className="" gap="4" direction="column">
           <Card
-            variant="surface"
-            className="  hover:shadow-lg m-0 hover:scale-105 transition-all duration-100 ease-in-out  hover:bg-gray-1 bg-red-3 "
+            variant="classic"
+            className="  hover:shadow-lg m-0 hover:scale-105    "
           >
             <Flex gap="1" direction="column">
               <Text>Issue #23 - Button Is Wrong Color</Text>
