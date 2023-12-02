@@ -11,6 +11,10 @@ import {
 } from "@radix-ui/themes";
 import IconDarkLight from "@/components/IconDarkLight";
 import { ChatBubbleIcon, SunIcon, MoonIcon } from "@radix-ui/react-icons";
+import { UserButton } from "@clerk/nextjs";
+import { User } from "@clerk/nextjs/server";
+import CustomUserButton from "@/components/CustomUserButton";
+
 // import "@radix-ui/themes/styles.css";
 
 export default function Home() {
@@ -29,12 +33,12 @@ export default function Home() {
         </Flex>
 
         <Flex className="" gap="4" direction="column">
-          <Card
-            variant="classic"
-            className="  hover:shadow-lg m-0 hover:scale-105    "
-          >
+          <Card variant="classic" className="  hover:shadow-lg m-0     ">
             <Flex gap="1" direction="column">
-              <Text>Issue #23 - Button Is Wrong Color</Text>
+              <Flex m={"0"} p={"0"} justify={"between"} align={"center"}>
+                <Text>Issue #23 - Button Is Wrong Color</Text>
+                <CustomUserButton />
+              </Flex>
               <Flex gap="2">
                 <Badge>Devops</Badge>
                 <Badge>UI</Badge>

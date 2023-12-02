@@ -1,5 +1,7 @@
 import { Theme, ThemePanel } from "@radix-ui/themes";
 import ThemeProviding from "@/components/ThemeProviding";
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 import "./globals.css";
 // import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
@@ -22,12 +24,14 @@ export default function RootLayout({
     <html className="h-full  " lang="en" suppressHydrationWarning>
       <body className={`${inter.className} h-full`}>
         <ThemeProviding className="h-full">
-          <Theme className="h-full" grayColor="mauve">
-            <div className="absolute top-0 -z-10 min-h-full w-full bg-gray-1">
-              <div className="absolute bottom-auto left-auto right-0 top-0 min-h-full w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-pink-4 opacity-50 blur-[80px]"></div>
-              {children}
-            </div>
-          </Theme>
+          <ClerkProvider>
+            <Theme className="h-full" grayColor="mauve">
+              <div className="absolute top-0 -z-10 min-h-full w-full bg-gray-1">
+                <div className="absolute bottom-auto left-auto right-0 top-0 min-h-full w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-pink-4 opacity-50 blur-[80px]"></div>
+                {children}
+              </div>
+            </Theme>
+          </ClerkProvider>
         </ThemeProviding>
       </body>
     </html>
